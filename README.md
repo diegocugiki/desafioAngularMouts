@@ -50,3 +50,32 @@ dotnet tool install --global dotnet-ef
 dotnet ef database update
 dotnet run
 ```
+
+Antes de iniciar o projeto do Angular, deve-se instalar o Node.js
+
+Após isso, no Visual Studio Code, necessita-se abrir outro Terminal, navegue até o diretório "FrontEnd" e digitar os seguintes comandos:
+```
+npm install -g @angular/cli
+npm update
+npm start
+```
+
+Caso dê erro ao executar 'npm' no terminal, adicione o diretório do Node às Variáveis de Ambiente de seu computador e reinicie-o.
+
+Após essas etapas, a API e o Angular estarão rodando ao mesmo tempo, e você poderá acessar o programa através do link `http://localhost:4200` em seu navegador.
+
+## Pacotes utilizados
+BackEnd:
+
+ - Microsoft.EntityFrameworkCore
+ - Microsoft.EntityFrameworkCore.SqlServer
+ - Microsoft.EntityFrameworkCore.Design
+ - Microsoft.EntityFrameworkCore.Tools
+ - Microsoft.EntityFrameworkCore.Analyzers
+ - Microsoft.AspNetCore.Mvc.NewtonsoftJson --version 3.1.7
+ - NUnit --version 3.12.0
+
+FrontEnd:
+
+ - Bootstrap
+ - NGX-Bootstrap
