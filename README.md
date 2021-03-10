@@ -37,3 +37,16 @@ site centralizado. </li></ol>
 <ol><li>Deve-se utilizar os campos criados partir das tabelas do banco de dados.</li><li>Na tela de listagem deverá apresentar as operações que usuário poderá 
 realizar (Criar, visualizar, editar e remover).</li><li>Ao finalizar o cadastro e edição deverá apresentar uma mensagem de 
 confirmação e usuário deverá ser redirecionado a página de listagem.</li><li> Ao tentar remover um item o mesmo deverá solicitar uma confirmação.</li></ol>
+
+## Como rodar a aplicação
+
+Antes de tudo, é preciso ter o SQL Server, o .NET Framework e o .NET Core instalados em seu computador. A API utiliza esses serviços para funcionar e para gerenciar um banco de dados.
+
+Depois de baixar os programas necessários, é preciso configurar a conexão com o banco de dados SQL no diretório `BackEnd/appsettings.json` e na chave `"ConexaoBase"`, cujo valor será a string de conexão. Para isso, crie um bloco de notas na área de trabalho e o salve como um arquivo .udl. Ao abrir esse arquivo udl, você conseguirá configurar a conexão. Depois de configurada, basta abrir o mesmo arquivo com o bloco de notas e terás a string de conexão.
+
+Para executar a API através do Visual Studio Code, deve-se abrir o Terminal com a combinação de teclas `Ctrl + Shift + ` ou `Ctrl + `, selecionar a pasta "BackEnd" com o comando cd e a tecla TAB e digitar os seguintes comandos:
+```
+dotnet tool install --global dotnet-ef
+dotnet ef database update
+dotnet run
+```
