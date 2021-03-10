@@ -11,8 +11,10 @@ Neste repositório há uma API RESTfull e um projeto do Angular criados com o in
 * [Pacotes utilizados](#pacotes-utilizados)
 
 
-<div id="criterios">
+
 ## Critérios
+
+<div id="criterios">
 
 ### Problema
 
