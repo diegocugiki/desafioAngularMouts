@@ -1,0 +1,96 @@
+<div class="container">
+    <div class="row">
+      <div *ngIf="estadoSelected.id != 0" class="col-sm-12">
+  
+        <app-titulo [titulo]="(estadoSelected.id === -1 ? 'Novo Estado': 'Código: ' + estadoSelected.id)">
+          <button class="btn btn-sm btn-outline-danger" (click)="voltar()">Voltar</button>
+        </app-titulo>
+  
+        <form [formGroup]="estadoForm" (submit)="onSubmit()">
+          <div class="form-group">
+            <label>Nome</label>
+            <input type="text" formControlName="nome" class="form-control">
+          </div>
+          <div class="form-group">
+            <label >Sigla</label>
+            <input type="text" formControlName="sigla" class="form-control">
+          </div>
+          <div class="row container">
+            <button class="btn btn-success" [disabled]="!estadoForm.valid">Salvar</button>
+          </div>
+        </form>
+  
+      </div>
+  
+      <div *ngIf="estadoSelected.id == 0" class="col-sm-12">
+        <app-titulo [titulo]="tituloEstado">
+          <button class="btn btn-sm btn-success" (click)="novoEstado()">Cadastrar estado</button>
+        </app-titulo>
+        <table class="table table-hover">
+          <thead class="thead-light">
+            <tr>
+              <th scope="col">Visualizar</th>
+              <th scope="col">#</th>
+              <th scope="col">Nome</th>
+              <th scope="col">Sigla</th>
+              <th scope="col">Opções</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let estado of estados">
+              <td>
+                <button (click)="estadoSelect(estado)" class="text-dark btn btn-sm btn-outline-info">
+                  Detalhe
+                </button>
+              </td>
+              <th scope="row">{{estado.id}}</th>
+              <td>{{estado.nome}}</td>
+              <td>{{estado.sigla}}</td>
+              <td>
+                <div class="btn-group">
+                  <button (click)="abrirDialogoDeConfirmacao(estado)" class="text-dark btn btn-sm btn-outline-danger">Excluir</button>
+                  <button (click)="openModal(template, estado.id)" class="text-dark btn btn-sm btn-outline-primary">Municípios</button>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+</div>
+
+<ng-template #template>
+    <div class="modal-body">
+      <div class="container">
+        <div class="row">
+            <app-titulo [titulo]="'Municípios'">
+            </app-titulo>
+            <table class="table table-hover">
+                <thead class="thead-light">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Estado</th>
+                    <th scope="col">Prefeito</th>
+                    <th scope="col">População</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let municipio of municipios">
+                    <th scope="row">{{municipio.id}}</th>
+                    <td>{{municipio.nome}}</td>
+                    <td>{{municipio.estado.nome}}</td>
+                    <td>{{municipio.prefeito}}</td>
+                    <td>{{municipio.populacao}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+        Fechar
+        </button>
+    </div>
+</ng-template>

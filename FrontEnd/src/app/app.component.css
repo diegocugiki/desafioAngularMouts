@@ -1,0 +1,9 @@
+.general-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .top-container {
+    flex: 1;
+  }
