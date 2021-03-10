@@ -26,15 +26,11 @@ população poderão ser preenchidos em branco)</li><li>Deverá ser criado uma r
 o municipio a um estado e um estado a varios municipios</li><li>itemd</li></ol>
 
 <ul><li>Um cabeçalho e um rodapé deverão ser compartilhados entre as páginas.</li></ul>
-a) O cabeçalho deverá conter um menu que chamará a listagem de estados e de 
-Municípios.
-b) No rodapé deverá conter o texto “Todos os direitos reservado” com ano atual 
+<ol><li>O cabeçalho deverá conter um menu que chamará a listagem de estados e de 
+Municípios.</li><li>itemb</li><li>No rodapé deverá conter o texto “Todos os direitos reservado” com ano atual 
 e o símbolo de copyright “©”, o mesmo deverá sempre na parte inferior do 
-site centralizado. 
-• Criar o CRUD de estados e municípios.
-a) Deve-se utilizar os campos criados partir das tabelas do banco de dados.
-b) Na tela de listagem deverá apresentar as operações que usuário poderá 
-realizar (Criar, visualizar, editar e remover).
-c) Ao finalizar o cadastro e edição deverá apresentar uma mensagem de 
-confirmação e usuário deverá ser redirecionado a página de listagem.
-d) Ao tentar remover um item o mesmo deverá solicitar uma confirmação.
+site centralizado. </li></ol>
+<ul><li>Criar o CRUD de estados e municípios.</li></ul>
+<ol><li>Deve-se utilizar os campos criados partir das tabelas do banco de dados.</li><li>Na tela de listagem deverá apresentar as operações que usuário poderá 
+realizar (Criar, visualizar, editar e remover).</li><li>Ao finalizar o cadastro e edição deverá apresentar uma mensagem de 
+confirmação e usuário deverá ser redirecionado a página de listagem.</li><li> Ao tentar remover um item o mesmo deverá solicitar uma confirmação.</li></ol>
