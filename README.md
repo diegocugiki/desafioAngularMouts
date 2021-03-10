@@ -9,10 +9,9 @@ Neste repositório há uma API RESTfull e um projeto do Angular criados com o in
 * [Critérios](#criterios)
 * [Como rodar a aplicação](#rodar-aplicacao)
 * [Pacotes utilizados](#pacotes-utilizados)
-* [Explicação dos modelos](#modelos)
-* [Efetuação das restrições](#restricoes)
-* [Endpoints](#endpoints)
 
+
+<div id="criterios">
 ## Critérios
 
 ### Problema
@@ -38,6 +37,7 @@ site centralizado. </li></ol>
 realizar (Criar, visualizar, editar e remover).</li><li>Ao finalizar o cadastro e edição deverá apresentar uma mensagem de 
 confirmação e usuário deverá ser redirecionado a página de listagem.</li><li> Ao tentar remover um item o mesmo deverá solicitar uma confirmação.</li></ol>
 
+<div id="rodar-aplicacao">
 ## Como rodar a aplicação
 
 Antes de tudo, é preciso ter o SQL Server, o .NET Framework e o .NET Core instalados em seu computador. A API utiliza esses serviços para funcionar e para gerenciar um banco de dados.
@@ -64,6 +64,7 @@ Caso dê erro ao executar 'npm' no terminal, adicione o diretório do Node às V
 
 Após essas etapas, a API e o Angular estarão rodando ao mesmo tempo, e você poderá acessar o programa através do link `http://localhost:4200` em seu navegador.
 
+<div id="pacotes-utilizados">
 ## Pacotes utilizados
 BackEnd:
 
@@ -79,3 +80,7 @@ FrontEnd:
 
  - Bootstrap
  - NGX-Bootstrap
+
+Os pacotes do EntityFrameworkCore foram usados para desenvolver a API;
+O pacote NewtonsoftJson foi empregado para impedir ciclos incessantes ao receber respostas da API;
+O pacote NUnit foi utilizado para realizar testes unitários na classe de verificação de listas na API; Os pacotes do FrontEnd foram recorridos com o intuito de estilizar as páginas HTML.
