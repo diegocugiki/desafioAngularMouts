@@ -19,13 +19,13 @@ Neste repositório há uma API RESTfull e um projeto do Angular criados com o in
 
 Nesse desafio você deverá criar um sistema de cadastro (CRUD) permitindo o gerenciamento 
 de Unidades Federativas e Municípios seguindo os requisitos a seguir:
-• Deverá ser criado as tabelas do banco de dados:
-a) Tabela estados, campos: id, nome, sigla
-b) Tabela municipios, campos: id, nome, prefeito, populacao. (Prefeito e 
-população poderão ser preenchidos em branco)
-c) Deverá ser criado uma relação entre a tabela municipios e estados, atrelando 
-o municipio a um estado e um estado a varios municipios
-• Um cabeçalho e um rodapé deverão ser compartilhados entre as páginas. 
+<ul><li>Deverá ser criado as tabelas do banco de dados:</li></ul>
+
+<ol><li>Tabela estados, campos: id, nome, sigla</li><li>Tabela municipios, campos: id, nome, prefeito, populacao. (Prefeito e 
+população poderão ser preenchidos em branco)</li><li>Deverá ser criado uma relação entre a tabela municipios e estados, atrelando 
+o municipio a um estado e um estado a varios municipios</li><li>itemd</li></ol>
+
+<ul><li>Um cabeçalho e um rodapé deverão ser compartilhados entre as páginas.</li></ul>
 a) O cabeçalho deverá conter um menu que chamará a listagem de estados e de 
 Municípios.
 b) No rodapé deverá conter o texto “Todos os direitos reservado” com ano atual 
